@@ -1,9 +1,7 @@
 name: Publish release
 
 on:
-  push:
-    tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages,
 # creating releases and publishing packages.
@@ -43,7 +41,7 @@ jobs:
           generate_release_notes: true
           body: |
             See the [npm package](https://github.com/govuk-one-login/data-vocab/pkgs/npm/data-vocab) for TypeScript types corresponding to this schema.
-            
+
             The JSON Schema files are attached to this release.
 
   publish-ts-types:

@@ -1,0 +1,17 @@
+name: publish-schemas
+
+on:
+  push:
+    branches:
+      - 'main'
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  publish-schemas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish schemas
+        uses: nickhealGDS/publish-schemas@main

@@ -3,11 +3,6 @@ name: 'Build and test'
 on:
   workflow_call:
   workflow_dispatch:
-  # not running this on main as it's pulled in by the deploy workflow anyway
-  # push:
-  #   branches:
-  #     - main
-  pull_request:
 
 permissions:
   contents: read
